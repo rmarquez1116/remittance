@@ -22,7 +22,7 @@ class DBConnection
 
             /* check connection */
             if ($this->conn->connect_errno) {
-                echo("Connect failed: %s\n",$this->conn->connect_error);
+                printf("Connect failed: %s\n",$this->conn->connect_error);
                 exit();
             }
             if (!$this->conn) {
