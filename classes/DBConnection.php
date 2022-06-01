@@ -34,8 +34,6 @@ class DBConnection
     }
     public function __destruct()
     {  
-        echo 'Destruct';
-             
         $this->conn->close();
     }
 }
