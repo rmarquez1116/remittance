@@ -19,7 +19,7 @@ class DBConnection
         if (!isset($this->conn)) {
 
             $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database, $this->port);
-            
+
             if (!$this->conn) {
                 echo 'Cannot connect to database server';
                 exit;
@@ -27,7 +27,9 @@ class DBConnection
         }
     }
     public function __destruct()
-    {
+    {  
+        echo 'Destruct';
+             
         $this->conn->close();
     }
 }
